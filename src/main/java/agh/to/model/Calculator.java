@@ -43,9 +43,14 @@ public class Calculator {
 	}
 
 	public void setInput() {
-		System.out.println("Enter 2 numbers: ");
-		num1 = input.nextInt();
-		num2 = input.nextInt();
+		if (operatorSc == Scientific.FIBB || operatorSc == Scientific.SINUS) {
+			System.out.println("Enter one number, but whatever i get it will be 0");
+			num1 = input.nextInt();
+		} else {
+			System.out.println("Enter two numbers:");
+			num1 = input.nextInt();
+			num2 = input.nextInt();
+		}
 	}
 
 	public void run() {
