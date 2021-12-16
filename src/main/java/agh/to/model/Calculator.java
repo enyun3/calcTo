@@ -43,18 +43,17 @@ public class Calculator {
 	}
 
 	public void setInput() {
-		System.out.println("Enter two numbers: ");
-		this.num1 = input.nextInt();
-		this.num2 = input.nextInt();
-
+		System.out.println("Enter 2 numbers: ");
+		num1 = input.nextInt();
+		num2 = input.nextInt();
 	}
 
 	public void run() {
 		chooseMode();
 		chooseOperation();
 		setInput();
-		if(mode == Mode.SCIENTIFIC){
-			System.out.println(operatorSc.calc(num1,num2));
+		if (mode == Mode.SCIENTIFIC) {
+			System.out.println(operatorSc.calc(num1, num2));
 		} else {
 			System.out.println(operator.calc(num1, num2));
 		}
